@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     inputs = document.querySelectorAll("input");
     inputs.forEach(input => {
         input.addEventListener("input", () => {
-            customCSS = `@import url("${window.location.origin}/css/custom.css");
+            customCSS = `@import url("${ new URL(document.location.pathname, document.location.origin).href }css/custom.css");
 
 :root {
     /* Цвет заголовка */
