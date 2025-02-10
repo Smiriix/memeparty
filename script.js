@@ -6,15 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
             customCSS = `@import url("${ urlPage }css/custom.css");
 
 :root {
-    /* Цвет заголовка */
     --titleColor: ${inputs[0].value};
-    /* Градиент прогресса */
     --gradient: linear-gradient(to bottom, ${inputs[1].value}, ${inputs[2].value});
-    /* Ширина картинки*/
     --width: ${inputs[3].value}px;
-    /* Положение картинки X и Y */
     --move: translate(${inputs[4].value}px, ${inputs[5].value}px);
-    /* Ссылка на изображение */
     --image: url("${inputs[6].value ? inputs[6].value : (urlPage + "doge.svg") }") no-repeat center center / contain;
 }`;
             document.querySelector("#resultCss").value = customCSS;
