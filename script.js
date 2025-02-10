@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /* Положение картинки X и Y */
     --move: translate(${inputs[4].value}px, ${inputs[5].value}px);
     /* Ссылка на изображение */
-    --image: url("${inputs[6].value ? inputs[6].value : urlPage . "doge.svg"}") no-repeat center center / contain;
+    --image: url("${inputs[6].value ? inputs[6].value : (urlPage + "doge.svg") }") no-repeat center center / contain;
 }`;
             document.querySelector("#resultCss").value = customCSS;
             document.querySelector("#customCss").innerHTML = customCSS;
