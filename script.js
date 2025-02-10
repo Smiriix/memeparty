@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     inputs = document.querySelectorAll("input");
+    urlPage = new URL(document.location.pathname, document.location.origin).href;
     inputs.forEach(input => {
         input.addEventListener("input", () => {
-            customCSS = `@import url("${ new URL(document.location.pathname, document.location.origin).href }css/custom.css");
+            customCSS = `@import url("${ urlPage }css/custom.css");
 
 :root {
     /* Цвет заголовка */
@@ -14,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /* Положение картинки X и Y */
     --move: translate(${inputs[4].value}px, ${inputs[5].value}px);
     /* Ссылка на изображение */
-    --image: url("${inputs[6].value ? inputs[6].value : new URL(document.location.pathname, document.location.origin).href . "doge.svg"}") no-repeat center center / contain;
+    --image: url("${inputs[6].value ? inputs[6].value : urlPage . "doge.svg"}") no-repeat center center / contain;
 }`;
             document.querySelector("#resultCss").value = customCSS;
             document.querySelector("#customCss").innerHTML = customCSS;
