@@ -1,0 +1,36 @@
+body {
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+.MemeParty__progressBarProgress--rn2qP {
+    background-image: var(--gradient);
+}
+
+.MemeParty__memePartyPicture--cMJz2 svg g>path {
+    fill: var(--titleColor);
+}
+
+.MemeParty__picture--rrrUY svg {
+    display: none;
+}
+
+.MemeParty__picture--rrrUY:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: var(--width);
+    aspect-ratio: 53 / 57;
+    bottom: 0;
+    left: 0;
+    background: var(--image);
+    transform: var(--move);
+}
+:root {
+    --titleColor: #ff00ae;
+    --gradient: linear-gradient(to bottom, #ff006f, #009dff);
+    --width: 84px;
+    --move: translate(-25px, 0px);
+    --image: url("https://smiriix.github.io/memeparty/gifs/91189f35-c374-4fd7-92b5-dc89a90edf98.gif") no-repeat center center / contain;
+}
