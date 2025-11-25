@@ -1,0 +1,29 @@
+body {
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+.MemeParty__progressBarProgress--rn2qP {
+    background-image: var(--gradient);
+}
+
+.MemeParty__memePartyPicture--cMJz2 svg g>path {
+    fill: var(--titleColor);
+}
+
+.MemeParty__picture--rrrUY svg {
+    display: none;
+}
+
+.MemeParty__picture--rrrUY:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: var(--width);
+    aspect-ratio: 53 / 57;
+    bottom: 0;
+    left: 0;
+    background: var(--image);
+    transform: var(--move);
+}
